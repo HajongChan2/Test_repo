@@ -1,7 +1,7 @@
 <template>
     <div class="con">
         <div class="container">
-            <h2>HelloWorld</h2>
+            <h1>레인보우 사공</h1>
             <div class="personal">
                 <input type="text" v-model="value" @input="value = value.replace(/[^0-9]/g, '')" maxlength="5" id="personal_number" placeholder="고번입력란 (숫자만 입력)">
                 <label for="personal_number" id="personal_num"></label>
