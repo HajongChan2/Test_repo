@@ -100,6 +100,7 @@ export default {
     border-radius: 8px;
     background-color: #ecf0f3;
     box-shadow: none;
+    cursor: pointer;
 }
 
 </style>
