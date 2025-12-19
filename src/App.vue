@@ -32,14 +32,12 @@ export default {
 
       if (this.select === 'two') {
         this.showCount = true
-
+        this.copyText();
         this.timer = setInterval(() => {
           this.count--
-
           if (this.count === 0) {
             clearInterval(this.timer)
             this.timer = null
-            this.copyText();
             this.showCount = false;
             this.count = 60
             console.log(this.showCount)
