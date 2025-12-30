@@ -12,6 +12,8 @@
                     <option value="two">일반압류</option>
                     <option value="three">보호구역 압류</option>
                     <option value="four">원격폐차</option>
+                    <option value="five">사유지 불법 차량</option>
+                    <option value="six">렉카 전퇴</option>
                 </select>
             </div>
             <button @click="test" id="btn">출력</button>
@@ -32,10 +34,16 @@ export default {
         test(){
             let num = document.getElementById('personal_number').value;
             let select = document.getElementById('select').value;
-            this.$emit('send-data', {
-                num,
-                select
-            })
+            if(num || select === "six"){
+                this.$emit('send-data', {
+                    num,
+                    select
+                })
+            }else{   
+                alert("고유번호를 입력하세요.");
+                document.getElementById('personal_number').focus();
+                return;
+            }
         }
     }
 }
